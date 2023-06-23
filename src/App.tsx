@@ -24,13 +24,11 @@ function App() {
     'B',
   ];
   const rules:{ [key: string]: number[] } = {
-    'major': [2, 2, 1, 2, 2, 2, 1],
-    'minor': [2, 1, 2, 2, 1, 2, 2]
+    'major'           : [2, 2, 1, 2, 2, 2, 1],
+    'minor'           : [2, 1, 2, 2, 1, 2, 2],
+    'pentatonic-minor': [3, 2, 2, 3, 2],
+    'pentatonic-major': [2, 2, 3, 2, 3]
   };
-  const scales = [
-    'major',
-    'minor'
-  ];
 
   const getScale = () => {
     let i     = notes.indexOf(selectedNote);
@@ -54,7 +52,7 @@ function App() {
         updateNote  = { (note: string) => setSelectedNote(note) }
         updateScale = { (scale: string) => setSelectedScale(scale) }
         scaleNotes  = { scaleNotes }
-        scales      = { scales }
+        scales      = { Object.keys(rules) }
         notes       = { notes }
       />
       <Fretboard 

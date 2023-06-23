@@ -7,18 +7,19 @@ interface FretboardProps {
 }
 
 const Fretboard: React.FC<FretboardProps> = ({ notes, note, allNotes }) => {
-  const strings = ["E", "A", "D", "G", "B", "E"];
+  const strings = ["E", "B", "G", "D", "A", "E"];
 
   const printNotes = () => {
     const result = [];
-
+    
     for (let i = 0; i < 6; i++) {
       let selectedNote = strings[i];
       const index = allNotes.indexOf(selectedNote);
-
+      
       for (let j = 0; j < 13; j++) {
         if (notes.includes(selectedNote)) {
           const divId = `${i}${selectedNote}`;
+          
           result.push(
             <div
               className = { `note` }
@@ -32,10 +33,11 @@ const Fretboard: React.FC<FretboardProps> = ({ notes, note, allNotes }) => {
                 }`,
               }}
             >
-              {selectedNote}
+              { selectedNote }
             </div>
           );
         }
+
         selectedNote = allNotes[(index + j + 1) % 12];
       }
     }
