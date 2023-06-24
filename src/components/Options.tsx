@@ -1,11 +1,10 @@
 import React from 'react';
+import { allNotes, scaleRules } from '../constants';
 
 interface OptionsProps {
   updateNote : (note:string) => void;
   updateScale: (note:string) => void;
   scaleNotes : string[];
-  scales     : string[];
-  notes      : string[];
 }
 
 function Options(props: OptionsProps ) {
@@ -26,7 +25,7 @@ function Options(props: OptionsProps ) {
         onChange  = { handleNoteChange }
       >
         {
-          props.notes.map( note => (
+          allNotes.map( note => (
             <option 
               value = { note }
               key   = { note }
@@ -41,7 +40,7 @@ function Options(props: OptionsProps ) {
         onChange  = { handleScaleChange }
       >
         {
-          props.scales.map( scale => (
+           Object.keys(scaleRules).map( scale => (
             <option 
               value = { scale }
               key   = { scale }

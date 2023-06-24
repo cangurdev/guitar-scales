@@ -1,12 +1,12 @@
 import React from "react";
+import { allNotes } from '../constants';
 
 interface FretboardProps {
   notes   : string[];
   note    : string;
-  allNotes: string[];
 }
 
-const Fretboard: React.FC<FretboardProps> = ({ notes, note, allNotes }) => {
+const Fretboard: React.FC<FretboardProps> = ({ notes, note }) => {
   const strings = ["E", "B", "G", "D", "A", "E"];
 
   const printNotes = () => {

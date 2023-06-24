@@ -1,14 +1,14 @@
 interface ScaleProps {
-    scale: string[];
+  scaleNotes: string[];
 }
 
-function Scale({ scale }: ScaleProps) {
+function Scale({ scaleNotes }: ScaleProps) {
   return (
     <div className="scale">
       <p>Scale</p>
-      { 
-        scale.map( (note, i) => 
-          `${note}${i !== scale.length -1 ? '-' : ''}`
+      {
+        scaleNotes.map(
+          (note, i) => `${note}${i !== scaleNotes.length - 1 ? "-" : ""}`
         )
       }
     </div>
