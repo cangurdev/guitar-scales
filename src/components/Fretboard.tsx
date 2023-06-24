@@ -29,7 +29,7 @@ const Fretboard: React.FC<FretboardProps> = ({ notes, note, allNotes }) => {
                 left           : `${j * 50 - 37}px`,
                 top            : `${i * 30 - 10}px`,
                 backgroundColor: `${
-                  note === selectedNote ? "#FF6666" : "#A0A0A0"
+                  note === selectedNote ? "#FFC26F" : "#F9E0BB"
                 }`,
               }}
             >
@@ -47,7 +47,10 @@ const Fretboard: React.FC<FretboardProps> = ({ notes, note, allNotes }) => {
 
   const getStrings = () => {
     return strings.map((_string, i) => (
-      <div className = { `string-${i + 1}` }></div>
+      <div 
+        className = { `string` }
+        style     = {{ top: `${i*30}px`}}
+      ></div>
     ));
   };
 
@@ -56,7 +59,17 @@ const Fretboard: React.FC<FretboardProps> = ({ notes, note, allNotes }) => {
 
     for (let i = 0; i < 13; i++) {
       frets.push(
-        <div className = { `fret-${i + 1}` }></div>
+        <div 
+          className = { `fret` }
+          style     = {{ left: `${ (i) * 50}px`}}
+        >
+          <span className="top">
+            { i }
+          </span>
+          <span className="bottom">
+            { i }
+          </span>
+        </div>
       );
     }
 

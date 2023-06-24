@@ -2,10 +2,15 @@ interface ScaleProps {
     scale: string[];
 }
 
-function Scale(props: ScaleProps) {
+function Scale({ scale }: ScaleProps) {
   return (
     <div className="scale">
-      <span>Scale: { props.scale } </span>
+      <p>Scale</p>
+      { 
+        scale.map( (note, i) => 
+          `${note}${i !== scale.length -1 ? '-' : ''}`
+        )
+      }
     </div>
   );
 }

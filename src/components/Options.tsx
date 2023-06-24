@@ -20,9 +20,10 @@ function Options(props: OptionsProps ) {
   };
 
   return (
-    <div className="App">
+    <div className="options">
       <select
-        onChange = { handleNoteChange }
+        className = 'note-options'
+        onChange  = { handleNoteChange }
       >
         {
           props.notes.map( note => (
@@ -36,7 +37,8 @@ function Options(props: OptionsProps ) {
         }
       </select>
       <select
-        onChange = { handleScaleChange }
+        className = 'scale-options'
+        onChange  = { handleScaleChange }
       >
         {
           props.scales.map( scale => (

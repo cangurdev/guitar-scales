@@ -1,9 +1,16 @@
+html {
+  background-color: #e1dad0;
+  height          : 100%;
+  width           : 100%;
+}
+
 .App {
   text-align     : center;
   display        : flex;
   flex-direction : column;
   justify-content: center;
   align-items    : center;
+  height         : 100%;
 }
 
 .fretboard {
@@ -15,6 +22,10 @@
   border          : 1px solid #ddd;
   top             : 30px;
   margin-bottom   : 60px;
+
+  .numbers {
+    display: flex;
+  }
 }
 
 .note {
@@ -25,27 +36,45 @@
   border       : 1px solid #000;
 }
 
-@for $i from 1 through 6 {
-  .string-#{$i} {
-    top             : ($i - 1) * 30px;
-    position        : absolute;
-    width           : 100%;
-    height          : 2px;
-    background-color: #888;
+.string {
+  position        : absolute;
+  width           : 100%;
+  height          : 2px;
+  background-color: #888;
+}
+
+.fret {
+  position        : absolute;
+  width           : 3px;
+  height          : 100%;
+  background-color: #888;
+
+  .top {
+    position: absolute;
+    top     : -30px;
+    left    : -30px;
+  }
+  
+  .bottom {
+    position: absolute;
+    top     : 180px;
+    left    : -30px;
   }
 }
 
-@for $i from 1 through 13 {
-  .fret-#{$i} {
-    left            : calc(($i - 1) * 50px);
-    position        : absolute;
-    width           : 3px;
-    height          : 100%;
-    background-color: #888;
-  }
+.selection {
+  display        : flex;
+  margin-top     : 20px;
+  justify-content: center;
+  align-items    : center;
 }
 
 select { 
-  width : 100px;
-  margin: 10px 0px;
+  margin       : 10px;
+  border-radius: 3px;
+  padding      : 5px;
+
+  .note-options {
+    width: 30px;
+  }
 }

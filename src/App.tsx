@@ -48,21 +48,23 @@ function App() {
 
   return (
     <div className="App">
-       <Options 
-        updateNote  = { (note: string) => setSelectedNote(note) }
-        updateScale = { (scale: string) => setSelectedScale(scale) }
-        scaleNotes  = { scaleNotes }
-        scales      = { Object.keys(rules) }
-        notes       = { notes }
-      />
       <Fretboard 
         notes    = { scaleNotes }
         note     = { selectedNote }
         allNotes = { notes }
       />
-      <Scale 
-        scale = { scaleNotes }
-      />
+      <div className='selection'>
+        <Options 
+          updateNote  = { (note: string) => setSelectedNote(note) }
+          updateScale = { (scale: string) => setSelectedScale(scale) }
+          scaleNotes  = { scaleNotes }
+          scales      = { Object.keys(rules) }
+          notes       = { notes }
+        />
+        <Scale 
+          scale = { scaleNotes }
+        />
+      </div>
     </div>
   );
 }
