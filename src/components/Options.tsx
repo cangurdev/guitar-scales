@@ -21,8 +21,9 @@ function Options(props: OptionsProps ) {
   return (
     <div className="options">
       <select
-        className = 'note-options'
-        onChange  = { handleNoteChange }
+        className   = 'note-options'
+        onChange    = { handleNoteChange }
+        data-testid = 'note-options'
       >
         {
           allNotes.map( note => (
@@ -36,8 +37,9 @@ function Options(props: OptionsProps ) {
         }
       </select>
       <select
-        className = 'scale-options'
-        onChange  = { handleScaleChange }
+        className   = 'scale-options'
+        onChange    = { handleScaleChange }
+        data-testid = 'scale-options'
       >
         {
            Object.keys(scaleRules).map( scale => (

@@ -50,6 +50,7 @@ const Fretboard: React.FC<FretboardProps> = ({ notes, note }) => {
       <div 
         className = { `string` }
         style     = {{ top: `${i*30}px`}}
+        key       = { 'string-' + i }
       ></div>
     ));
   };
@@ -62,6 +63,7 @@ const Fretboard: React.FC<FretboardProps> = ({ notes, note }) => {
         <div 
           className = { `fret` }
           style     = {{ left: `${ (i) * 50}px`}}
+          key       = { 'fret-' + i}
         >
           <span className="top">
             { i }
