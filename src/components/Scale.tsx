@@ -3,14 +3,24 @@ interface ScaleProps {
 }
 
 function Scale({ scaleNotes }: ScaleProps) {
+  const getNotes = () : string => {
+    let notes = '';
+
+    scaleNotes.forEach(
+      (note, i) => notes += `${note}${i !== scaleNotes.length - 1 ? "-" : ""}`
+    );
+    
+    return notes;
+  }
+
   return (
     <div className="scale">
       <p>Scale</p>
-      {
-        scaleNotes.map(
-          (note, i) => `${note}${i !== scaleNotes.length - 1 ? "-" : ""}`
-        )
-      }
+      <div>
+        {
+          getNotes()
+        }
+      </div>
     </div>
   );
 }

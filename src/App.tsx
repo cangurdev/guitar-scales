@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App.scss';
+import './App.css';
 import Fretboard from './components/Fretboard';
 import Options from './components/Options';
 import Scale from './components/Scale';
