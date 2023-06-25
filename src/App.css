@@ -44,19 +44,19 @@ html {
 }
 
 .fret {
-  position        : absolute;
+  position        : absolute !important;
   width           : 3px;
   height          : 100%;
   background-color: #888;
 
   .top {
-    position: absolute;
+    position: absolute !important;
     top     : -30px;
     left    : -30px;
   }
   
   .bottom {
-    position: absolute;
+    position: absolute !important;
     top     : 180px;
     left    : -30px;
   }
