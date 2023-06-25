@@ -7,9 +7,9 @@ interface ScaleProps {
 }
 
 function Chords({ scale, scaleNotes }: ScaleProps) {
-  const root = scaleNotes[0];
+  const root: string = scaleNotes[0];
   scale = scale.includes('minor') ? 'minor' : 'major';
-  const rootScale = getScale({
+  const rootScale: string[] = getScale({
     note : root,
     scale: scale
   });

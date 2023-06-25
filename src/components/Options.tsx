@@ -45,7 +45,7 @@ function Options(props: OptionsProps ) {
               value = { scale }
               key   = { scale }
             >
-              { scale }
+              { scaleRules[scale].text }
             </option>
           ))
         }

@@ -24,15 +24,15 @@ export const scaleRules: Record<string, ScaleRule> = {
         chords   : ["m", "dim", "", "m", "m", "", "", "m"],
         text     : 'Minor'
     },
-    'minor-pentatonic': {
-        intervals: [3, 2, 2, 3, 2],
-        chords   : ["m", "dim", "", "m", "m", "", "", "m"],
-        text     : 'Minor Pentatonic',
-    },
     'major-pentatonic': {
         intervals: [2, 2, 3, 2, 3],
         chords   : ["", "m", "m", "", "", "m", "dim", ""],
         text     : 'Major Pentatonic',
+    },
+    'minor-pentatonic': {
+        intervals: [3, 2, 2, 3, 2],
+        chords   : ["m", "dim", "", "m", "m", "", "", "m"],
+        text     : 'Minor Pentatonic',
     },
 };
 
