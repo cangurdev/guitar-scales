@@ -1,5 +1,5 @@
 import React from 'react';
-import { allNotes, scaleRules } from '../constants';
+import { allNotes, scaleRules } from '../../constants';
 
 interface OptionsProps {
   updateNote : (note:string) => void;

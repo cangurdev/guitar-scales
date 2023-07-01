@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Fretboard from './components/Fretboard';
-import Options from './components/Options';
-import Scale from './components/Scale';
-import Chords from './components/Chords';
+import Fretboard from './components/fretboard';
+import Options from './components/options';
+import Scale from './components/scale';
+import Chords from './components/chords';
 import { getScale } from './utils';
 
 function App() {

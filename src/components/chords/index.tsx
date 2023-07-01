@@ -1,5 +1,5 @@
-import { scaleRules } from '../constants';
-import { getScale } from '../utils';
+import { scaleRules } from '../../constants';
+import { getScale } from '../../utils';
 
 interface ScaleProps {
   scaleNotes: string[];

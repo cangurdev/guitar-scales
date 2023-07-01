@@ -1,4 +1,4 @@
-import { allNotes, scaleRules } from './constants';
+import { allNotes, scaleRules } from '../constants';
 
 interface getScaleProps {
     note : string,

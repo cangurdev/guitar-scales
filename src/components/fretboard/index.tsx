@@ -1,5 +1,5 @@
 import React from "react";
-import { allNotes } from '../constants';
+import { allNotes } from '../../constants';
 
 interface FretboardProps {
   notes   : string[];
